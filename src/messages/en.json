@@ -1,25 +1,42 @@
 {
   "Home": {
     "hero": {
-      "title": "Democratize Data Analysis",
-      "subtitle": "Transform your data into actionable insights with the power of AI",
+      "title": "Welcome to InsightFlow",
+      "subtitle": "The best AI-powered data analysis platform",
+      "description": "Transform your data into valuable insights with our advanced artificial intelligence technology.",
       "cta": "Get Started",
       "freeTrial": "Free Trial"
     },
     "features": {
-      "title": "Why choose InsightFlow?",
+      "title": "Key Features",
+      "subtitle": "Everything you need for professional data analysis",
       "ai": {
         "title": "Advanced AI",
-        "description": "Machine learning algorithms that identify hidden patterns in your data"
+        "description": "Machine learning algorithms for predictive analysis and automated insights."
       },
-      "simple": {
-        "title": "Simple Interface",
-        "description": "Intuitive design that enables complex analysis without technical knowledge"
+      "dashboard": {
+        "title": "Intuitive Dashboard",
+        "description": "Clean and easy-to-use interface to visualize all your data."
       },
       "realtime": {
-        "title": "Real Time",
-        "description": "Automatically updated dashboards for fast and accurate decisions"
+        "title": "Real-time",
+        "description": "Instant updates and real-time monitoring of your data."
+      },
+      "security": {
+        "title": "Advanced Security",
+        "description": "Enterprise-level data protection with end-to-end encryption."
       }
+    },
+    "stats": {
+      "users": "Active Users",
+      "analyses": "Analyses Performed",
+      "accuracy": "Average Accuracy",
+      "uptime": "Uptime"
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Join thousands of companies already using InsightFlow",
+      "button": "Start Free Trial"
     }
   },
   "Navbar": {

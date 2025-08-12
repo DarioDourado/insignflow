@@ -22,7 +22,6 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Mock users database (em produção seria uma API)
 const MOCK_USERS = [
   {
     id: "1",
@@ -43,7 +42,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Verificar se existe um utilizador guardado no localStorage
     const savedUser = localStorage.getItem("insightflow_user");
     if (savedUser) {
       try {
@@ -59,7 +57,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signIn = async (email: string, password: string): Promise<void> => {
     setLoading(true);
 
-    // Simular delay de rede
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     const foundUser = MOCK_USERS.find(
@@ -85,17 +82,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signUp = async (email: string, password: string): Promise<void> => {
     setLoading(true);
 
-    // Simular delay de rede
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Verificar se o utilizador já existe
     const existingUser = MOCK_USERS.find((u) => u.email === email);
     if (existingUser) {
       setLoading(false);
       throw new Error("Este email já está registado");
     }
 
-    // Validação básica
     if (password.length < 6) {
       setLoading(false);
       throw new Error("A palavra-passe deve ter pelo menos 6 caracteres");
@@ -106,7 +100,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       id: Date.now().toString(),
       email,
       password,
-      name: email.split("@")[0], // Usar parte do email como nome
+      name: email.split("@")[0],
     };
 
     MOCK_USERS.push(newUser);

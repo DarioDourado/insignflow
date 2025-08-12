@@ -1,29 +1,46 @@
 {
   "Home": {
     "hero": {
-      "title": "Democratize a Análise de Dados",
-      "subtitle": "Transforme seus dados em insights acionáveis com o poder da IA",
+      "title": "Bem-vindo ao InsightFlow",
+      "subtitle": "A melhor plataforma para análise de dados com IA",
+      "description": "Transforme os seus dados em insights valiosos com nossa tecnologia avançada de inteligência artificial.",
       "cta": "Começar Agora",
       "freeTrial": "Teste Grátis"
     },
     "features": {
-      "title": "Por que escolher o InsightFlow?",
+      "title": "Funcionalidades Principais",
+      "subtitle": "Tudo o que precisa para análise de dados profissional",
       "ai": {
         "title": "IA Avançada",
-        "description": "Algoritmos de machine learning que identificam padrões ocultos nos seus dados"
+        "description": "Algoritmos de machine learning para análise preditiva e insights automatizados."
       },
-      "simple": {
-        "title": "Interface Simples",
-        "description": "Design intuitivo que permite análises complexas sem conhecimento técnico"
+      "dashboard": {
+        "title": "Dashboard Intuitivo",
+        "description": "Interface limpa e fácil de usar para visualizar todos os seus dados."
       },
       "realtime": {
         "title": "Tempo Real",
-        "description": "Dashboards atualizados automaticamente para decisões rápidas e precisas"
+        "description": "Atualizações instantâneas e monitorização em tempo real dos seus dados."
+      },
+      "security": {
+        "title": "Segurança Avançada",
+        "description": "Proteção de dados de nível empresarial com encriptação ponta a ponta."
       }
+    },
+    "stats": {
+      "users": "Utilizadores Ativos",
+      "analyses": "Análises Realizadas",
+      "accuracy": "Precisão Média",
+      "uptime": "Tempo de Atividade"
+    },
+    "cta": {
+      "title": "Pronto para começar?",
+      "subtitle": "Junte-se a milhares de empresas que já usam o InsightFlow",
+      "button": "Começar Teste Gratuito"
     }
   },
   "Navbar": {
-    "home": "Home",
+    "home": "Início",
     "about": "Sobre",
     "plans": "Planos",
     "login": "Entrar",

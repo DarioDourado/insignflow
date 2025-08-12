@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import type { User } from "@/types";
 import { useTranslations, useLocale } from "@/lib/i18n";
+import Links from "./Links";
 
 interface NavbarProps {
   user?: User | null;
@@ -25,7 +25,7 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
       if (onLogout) {
         onLogout();
       } else {
-        router.push("/");
+        router.push(`/${locale}/`);
       }
     } catch (error) {
       console.error("Erro ao fazer logout:", error);
@@ -43,12 +43,9 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top shadow">
       <div className="container">
-        <Link
-          href={`/${locale}`}
-          className="navbar-brand fw-bold text-teal fs-3"
-        >
+        <Links href="/" className="navbar-brand fw-bold text-teal fs-3">
           InsightFlow
-        </Link>
+        </Links>
 
         <button
           className="navbar-toggler"
@@ -61,49 +58,46 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
-          id="navbarNav"
-        >
+        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto d-flex justify-content-end align-items-center">
             <li className="nav-item">
-              <Link
-                href={`/${locale}`}
+              <Links
+                href="/"
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
                 {t("home")}
-              </Link>
+              </Links>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/${locale}/about`}
+              <Links
+                href="/about"
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
                 {t("about")}
-              </Link>
+              </Links>
             </li>
             <li className="nav-item">
-              <Link
-                href={`/${locale}/plans`}
+              <Links
+                href="/plans"
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
                 {t("plans")}
-              </Link>
+              </Links>
             </li>
 
             {user ? (
               <>
                 <li className="nav-item">
-                  <Link
-                    href={`/${locale}/dashboard`}
+                  <Links
+                    href="/dashboard"
                     className="nav-link text-light"
                     onClick={closeMenu}
                   >
                     {t("dashboard")}
-                  </Link>
+                  </Links>
                 </li>
                 <li className="nav-item ms-2">
                   <button
@@ -119,21 +113,19 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
               </>
             ) : (
               <li className="nav-item ms-2">
-                <Link
-                  href={`/${locale}/login`}
+                <Links
+                  href="/login"
                   className="btn btn-teal btn-sm rounded-pill"
                   onClick={closeMenu}
                 >
                   {t("login")}
-                </Link>
+                </Links>
               </li>
             )}
+
+            {/* Botões de idioma ainda usam router.push */}
             <li className="nav-item ms-3">
-              <div
-                className="btn-group"
-                role="group"
-                aria-label="Language switcher"
-              >
+              <div className="btn-group">
                 <button
                   className={`btn btn-sm ${
                     locale === "pt" ? "btn-teal" : "btn-outline-secondary"
