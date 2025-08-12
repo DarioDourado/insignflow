@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "@/lib/i18n";
 import Links from "./Links";
 
 export default function HeroSection() {
-  const t = useTranslations("Home");
+  const t = useTranslations("hero");
   const locale = useLocale();
 
   return (
@@ -19,15 +19,13 @@ export default function HeroSection() {
       <div className="container position-relative" style={{ zIndex: 10 }}>
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <h1 className="display-2 fw-bold text-white mb-4">
-              {t("hero.title")}
-            </h1>
-            <p className="lead fs-4 text-light mb-5">{t("hero.subtitle")}</p>
+            <h1 className="display-2 fw-bold text-white mb-4">{t("title")}</h1>
+            <p className="lead fs-4 text-light mb-5">{t("subtitle")}</p>
             <Links
               href={`/login`}
               className="btn btn-teal btn-lg rounded-pill px-5 py-3 fw-bold"
             >
-              {t("hero.cta")}
+              {t("cta")}
             </Links>
           </div>
         </div>
