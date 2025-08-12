@@ -1,26 +1,256 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bs-dark: #111827;
+  --bs-secondary: #374151;
+  --bs-primary: #14b8a6;
+  --bs-success: #10b981;
+  --bs-info: #3b82f6;
+  --bs-warning: #fbbf24;
+  --bs-danger: #f43f5e;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+/* Custom dark theme overrides */
+.bg-dark-custom {
+  background-color: #111827 !important;
+}
+
+.bg-dark-secondary {
+  background-color: #1f2937 !important;
+}
+
+.bg-dark-tertiary {
+  background-color: #374151 !important;
+}
+
+.text-teal {
+  color: #14b8a6 !important;
+}
+
+.btn-teal {
+  background-color: #14b8a6;
+  border-color: #14b8a6;
+  color: #111827;
+}
+
+.btn-teal:hover {
+  background-color: #0d9488;
+  border-color: #0d9488;
+  color: #111827;
+}
+
+/* Animações dos super-heróis */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes waving-cape-left {
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(5px);
+  }
+}
+
+@keyframes waving-cape-right {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+  50% {
+    transform: rotate(5deg) translateY(5px);
+  }
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.waving-cape-left {
+  transform-origin: top left;
+  animation: waving-cape-left 2s ease-in-out infinite;
+}
+
+.waving-cape-right {
+  transform-origin: top right;
+  animation: waving-cape-right 2s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.2s;
+}
+.delay-3 {
+  animation-delay: 0.3s;
+}
+.delay-4 {
+  animation-delay: 0.4s;
+}
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14b8a6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* Bootstrap customizations */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0d9488;
+  border-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(20, 184, 166, 0.3);
+}
+
+.bg-dark-custom {
+  background-color: var(--dark-bg) !important;
+}
+
+.bg-darker-custom {
+  background-color: var(--darker-bg) !important;
+}
+
+/* Navbar enhancements */
+.navbar {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.navbar-brand {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  border-radius: 0.375rem;
+  margin: 0 0.125rem;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(20, 184, 166, 0.1);
+  transform: translateY(-1px);
+  color: #14b8a6 !important;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: rgba(20, 184, 166, 0.2);
+  box-shadow: 0 2px 4px rgba(20, 184, 166, 0.3);
+}
+
+.navbar-toggler {
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(20, 184, 166, 0.1);
+  transform: scale(1.1);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2820, 184, 166, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile improvements */
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(15, 23, 42, 0.98);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    margin: 0.125rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .navbar-collapse .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+
+  .navbar-collapse .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Card hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(20, 184, 166, 0.15);
+}
+
+/* Button hover effects */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
