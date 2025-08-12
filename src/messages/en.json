@@ -1,0 +1,39 @@
+{
+  "Home": {
+    "hero": {
+      "title": "Democratize Data Analysis",
+      "subtitle": "Transform your data into actionable insights with the power of AI",
+      "cta": "Get Started",
+      "freeTrial": "Free Trial"
+    },
+    "features": {
+      "title": "Why choose InsightFlow?",
+      "ai": {
+        "title": "Advanced AI",
+        "description": "Machine learning algorithms that identify hidden patterns in your data"
+      },
+      "simple": {
+        "title": "Simple Interface",
+        "description": "Intuitive design that enables complex analysis without technical knowledge"
+      },
+      "realtime": {
+        "title": "Real Time",
+        "description": "Automatically updated dashboards for fast and accurate decisions"
+      }
+    }
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "plans": "Plans",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "Footer": {
+    "company": "Company",
+    "links": "Useful Links",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  }
+}

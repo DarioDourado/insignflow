@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import type { User } from "@/types";
+import { useTranslations, useLocale } from "@/lib/i18n";
 
 interface NavbarProps {
   user?: User | null;
@@ -15,6 +16,8 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { signOut } = useAuth();
   const router = useRouter();
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
 
   const handleLogout = async () => {
     try {
@@ -40,7 +43,10 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top shadow">
       <div className="container">
-        <Link href="/" className="navbar-brand fw-bold text-teal fs-3">
+        <Link
+          href={`/${locale}`}
+          className="navbar-brand fw-bold text-teal fs-3"
+        >
           InsightFlow
         </Link>
 
@@ -62,29 +68,29 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
           <ul className="navbar-nav ms-auto d-flex justify-content-end align-items-center">
             <li className="nav-item">
               <Link
-                href="/"
+                href={`/${locale}`}
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                href="/about"
+                href={`/${locale}/about`}
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
-                Sobre Nós
+                {t("about")}
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                href="/plans"
+                href={`/${locale}/plans`}
                 className="nav-link text-light"
                 onClick={closeMenu}
               >
-                Planos
+                {t("plans")}
               </Link>
             </li>
 
@@ -92,11 +98,11 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
               <>
                 <li className="nav-item">
                   <Link
-                    href="/dashboard"
+                    href={`/${locale}/dashboard`}
                     className="nav-link text-light"
                     onClick={closeMenu}
                   >
-                    Dashboard
+                    {t("dashboard")}
                   </Link>
                 </li>
                 <li className="nav-item ms-2">
@@ -107,21 +113,47 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
                     }}
                     className="btn btn-danger btn-sm rounded-pill"
                   >
-                    Logout
+                    {t("logout")}
                   </button>
                 </li>
               </>
             ) : (
               <li className="nav-item ms-2">
                 <Link
-                  href="/login"
+                  href={`/${locale}/login`}
                   className="btn btn-teal btn-sm rounded-pill"
                   onClick={closeMenu}
                 >
-                  Login
+                  {t("login")}
                 </Link>
               </li>
             )}
+            <li className="nav-item ms-3">
+              <div
+                className="btn-group"
+                role="group"
+                aria-label="Language switcher"
+              >
+                <button
+                  className={`btn btn-sm ${
+                    locale === "pt" ? "btn-teal" : "btn-outline-secondary"
+                  }`}
+                  onClick={() => router.push("/pt")}
+                  type="button"
+                >
+                  PT
+                </button>
+                <button
+                  className={`btn btn-sm ${
+                    locale === "en" ? "btn-teal" : "btn-outline-secondary"
+                  }`}
+                  onClick={() => router.push("/en")}
+                  type="button"
+                >
+                  EN
+                </button>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

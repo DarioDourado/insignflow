@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { useTranslations, useLocale } from "@/lib/i18n";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("Footer");
+  const locale = useLocale();
 
   return (
     <footer className="bg-gray-950 text-gray-400 py-10">
@@ -17,11 +20,13 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4">Links Úteis</h4>
+          <h4 className="text-lg font-semibold text-white mb-4">
+            {t("links")}
+          </h4>
           <ul className="space-y-2">
             <li>
               <Link
-                href="/"
+                href={`/${locale}`}
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Home
@@ -29,7 +34,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/about"
+                href={`/${locale}/about`}
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Sobre Nós
@@ -37,7 +42,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/plans"
+                href={`/${locale}/plans`}
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 Planos
@@ -49,7 +54,7 @@ export default function Footer() {
         {/* Legal & Contact */}
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">
-            Legal & Contacto
+            {t("contact")}
           </h4>
           <ul className="space-y-2">
             <li>
@@ -125,7 +130,9 @@ export default function Footer() {
       </div>
 
       <div className="mt-8 pt-4 border-t border-gray-800 text-center text-sm">
-        <p>&copy; {currentYear} InsightFlow. Todos os direitos reservados.</p>
+        <p>
+          &copy; {currentYear} InsightFlow. {t("rights")}.
+        </p>
       </div>
     </footer>
   );

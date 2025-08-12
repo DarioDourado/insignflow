@@ -1,0 +1,39 @@
+{
+  "Home": {
+    "hero": {
+      "title": "Democratize a Análise de Dados",
+      "subtitle": "Transforme seus dados em insights acionáveis com o poder da IA",
+      "cta": "Começar Agora",
+      "freeTrial": "Teste Grátis"
+    },
+    "features": {
+      "title": "Por que escolher o InsightFlow?",
+      "ai": {
+        "title": "IA Avançada",
+        "description": "Algoritmos de machine learning que identificam padrões ocultos nos seus dados"
+      },
+      "simple": {
+        "title": "Interface Simples",
+        "description": "Design intuitivo que permite análises complexas sem conhecimento técnico"
+      },
+      "realtime": {
+        "title": "Tempo Real",
+        "description": "Dashboards atualizados automaticamente para decisões rápidas e precisas"
+      }
+    }
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "Sobre",
+    "plans": "Planos",
+    "login": "Entrar",
+    "dashboard": "Dashboard",
+    "logout": "Sair"
+  },
+  "Footer": {
+    "company": "Empresa",
+    "links": "Links Úteis",
+    "contact": "Contacto",
+    "rights": "Todos os direitos reservados"
+  }
+}

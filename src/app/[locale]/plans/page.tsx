@@ -1,13 +1,14 @@
 "use client";
-
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import { useAuth } from "@/hooks/useAuth";
+import { useLocale } from "@/lib/i18n";
 
 export default function Plans() {
   const { user } = useAuth();
   const router = useRouter();
+  const locale = useLocale();
 
   const plansData = [
     {
@@ -21,7 +22,7 @@ export default function Plans() {
         "Relatórios e partilha manual",
       ],
       buttonText: "Começar Gratuitamente",
-      buttonAction: () => router.push("/login"),
+      buttonAction: () => router.push(`/${locale}/login`),
     },
     {
       name: "Premium",
@@ -58,7 +59,6 @@ export default function Plans() {
   return (
     <>
       <Navbar user={user} />
-
       <main className="text-gray-200 bg-gray-900 min-h-screen pt-20">
         <section className="container mx-auto p-8 max-w-6xl">
           <h1 className="text-4xl font-bold text-center text-teal-400 mb-6">
@@ -69,7 +69,6 @@ export default function Plans() {
             o acesso gratuito para começar até à equipa completa de agentes para
             profissionais e empresas.
           </p>
-
           <div className="grid md:grid-cols-3 gap-8">
             {plansData.map((plan, index) => (
               <div
@@ -116,7 +115,6 @@ export default function Plans() {
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
