@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
@@ -29,6 +29,14 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top shadow">
       <div className="container">
@@ -39,12 +47,10 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -53,19 +59,31 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
           className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
           id="navbarNav"
         >
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto d-flex justify-content-end align-items-center">
             <li className="nav-item">
-              <Link href="/" className="nav-link text-light">
+              <Link
+                href="/"
+                className="nav-link text-light"
+                onClick={closeMenu}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/about" className="nav-link text-light">
+              <Link
+                href="/about"
+                className="nav-link text-light"
+                onClick={closeMenu}
+              >
                 Sobre Nós
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/plans" className="nav-link text-light">
+              <Link
+                href="/plans"
+                className="nav-link text-light"
+                onClick={closeMenu}
+              >
                 Planos
               </Link>
             </li>
@@ -73,13 +91,20 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
             {user ? (
               <>
                 <li className="nav-item">
-                  <Link href="/dashboard" className="nav-link text-light">
+                  <Link
+                    href="/dashboard"
+                    className="nav-link text-light"
+                    onClick={closeMenu}
+                  >
                     Dashboard
                   </Link>
                 </li>
                 <li className="nav-item ms-2">
                   <button
-                    onClick={handleLogout}
+                    onClick={() => {
+                      closeMenu();
+                      handleLogout();
+                    }}
                     className="btn btn-danger btn-sm rounded-pill"
                   >
                     Logout
@@ -91,6 +116,7 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
                 <Link
                   href="/login"
                   className="btn btn-teal btn-sm rounded-pill"
+                  onClick={closeMenu}
                 >
                   Login
                 </Link>
