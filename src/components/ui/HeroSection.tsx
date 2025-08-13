@@ -22,7 +22,7 @@ export default function HeroSection() {
             <h1 className="display-2 fw-bold text-white mb-4">{t("title")}</h1>
             <p className="lead fs-4 text-light mb-5">{t("subtitle")}</p>
             <Links
-              href={`/login`}
+              href={`/${locale}/login`}
               className="btn btn-teal btn-lg rounded-pill px-5 py-3 fw-bold"
             >
               {t("cta")}

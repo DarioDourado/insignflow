@@ -9,16 +9,25 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  let messages;
+  let messages = {};
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = (await import(`@/messages/${locale}.json`)).default;
   } catch (error) {
-    messages = (await import(`../../messages/pt.json`)).default;
+    console.warn(`Could not load messages for locale: ${locale}`);
+    try {
+      messages = (await import(`@/messages/pt.json`)).default;
+    } catch {
+      console.error("Could not load fallback messages");
+    }
   }
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      {children}
-    </I18nProvider>
+    <html lang={locale}>
+      <body>
+        <I18nProvider locale={locale} messages={messages}>
+          {children}
+        </I18nProvider>
+      </body>
+    </html>
   );
 }
