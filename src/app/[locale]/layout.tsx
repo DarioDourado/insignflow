@@ -22,12 +22,10 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body>
-        <I18nProvider locale={locale} messages={messages}>
-          {children}
-        </I18nProvider>
-      </body>
-    </html>
+    <>
+      <I18nProvider locale={locale} messages={messages}>
+        {children}
+      </I18nProvider>
+    </>
   );
 }
