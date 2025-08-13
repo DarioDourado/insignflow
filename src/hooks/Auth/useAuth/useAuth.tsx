@@ -95,7 +95,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       throw new Error("A palavra-passe deve ter pelo menos 6 caracteres");
     }
 
-    // Criar novo utilizador
     const newUser = {
       id: Date.now().toString(),
       email,

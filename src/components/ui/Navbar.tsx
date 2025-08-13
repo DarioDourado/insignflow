@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "@/hooks/Auth/useAuth/useAuth";
 import type { User } from "@/types";
 import { useTranslations, useLocale } from "@/lib/i18n";
 import Links from "./Links";

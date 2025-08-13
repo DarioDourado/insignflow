@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "@/hooks/Auth/useAuth/useAuth";
 
 export default function AboutUs() {
   const { user } = useAuth();

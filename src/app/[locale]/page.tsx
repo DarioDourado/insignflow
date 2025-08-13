@@ -4,11 +4,11 @@ import Link from "next/link";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import SuperHeroCard from "@/components/ui/SuperHeroCard";
-import { useAuth } from "@/hooks/useAuth";
 import { useTranslations, useLocale } from "@/lib/i18n";
 import Links from "@/components/ui/Links";
 import HeroSection from "@/components/ui/HeroSection";
 import FeaturesSection from "@/components/ui/FeaturesSection";
+import { useAuth } from "@/hooks/Auth/useAuth/useAuth";
 
 export default function Home() {
   const { user } = useAuth();
