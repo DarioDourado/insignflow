@@ -1,31 +1,37 @@
 {
   "hero": {
     "title": "Welcome to InsightFlow",
-    "subtitle": "The best AI-powered data analysis platform",
-    "description": "Transform your data into valuable insights with our advanced artificial intelligence technology.",
-    "cta": "Get Started",
+    "subtitle": "The best platform for AI-powered data analysis",
+    "description": "Turn your data into valuable insights with our advanced artificial intelligence technology.",
+    "cta": "Start Now",
     "freeTrial": "Free Trial"
   },
-  "features": {
-    "title": "Key Features",
-    "subtitle": "Everything you need for professional data analysis",
-    "ai": {
-      "title": "Advanced AI",
-      "description": "Machine learning algorithms for predictive analysis and automated insights."
-    },
-    "dashboard": {
-      "title": "Intuitive Dashboard",
-      "description": "Clean and easy-to-use interface to visualize all your data."
-    },
-    "realtime": {
-      "title": "Real-time",
-      "description": "Instant updates and real-time monitoring of your data."
-    },
-    "security": {
-      "title": "Advanced Security",
-      "description": "Enterprise-level data protection with end-to-end encryption."
-    }
+
+  "features_title": "Main Features",
+  "features_subtitle": "Everything you need for professional data analysis",
+
+  "features_ai_title": "Advanced AI",
+  "features_ai_description": "Machine learning algorithms for predictive analysis and automated insights.",
+
+  "features_simple_title": "Simple and Intuitive",
+  "features_simple_description": "Drag-and-drop interface to create custom dashboards in minutes.",
+
+  "features_realtime_title": "Real-Time Updates",
+  "features_realtime_description": "Real-time monitoring so you never miss an important update.",
+
+  "dashboard": {
+    "title": "Intuitive Dashboard",
+    "description": "Clean and easy-to-use interface to visualize all your data."
   },
+  "realtime": {
+    "title": "Real Time",
+    "description": "Instant updates and real-time monitoring of your data."
+  },
+  "security": {
+    "title": "Advanced Security",
+    "description": "Enterprise-level data protection with end-to-end encryption."
+  },
+
   "stats": {
     "users": "Active Users",
     "analyses": "Analyses Performed",
@@ -37,6 +43,7 @@
     "subtitle": "Join thousands of companies already using InsightFlow",
     "button": "Start Free Trial"
   },
+
   "Navbar": {
     "home": "Home",
     "about": "About",
@@ -45,10 +52,71 @@
     "dashboard": "Dashboard",
     "logout": "Logout"
   },
-  "Footer": {
-    "company": "Company",
-    "links": "Useful Links",
-    "contact": "Contact",
-    "rights": "All rights reserved"
-  }
+
+  "Footer_company": "Company",
+  "Footer_links": "Useful Links",
+  "Footer_contact": "Contact",
+  "Footer_rights": "All rights reserved",
+  "footer_terms_and_services": "Terms of Service",
+  "footer_privacy_policy": "Privacy Policy",
+  "footer_description": "We democratize data analysis with the power of AI, making insights accessible to all businesses.",
+
+  "whyPlatform_title": "Your data is your greatest competitive advantage.",
+  "whyPlatform_description": "Over 80% of SMEs have valuable data they do not use. Complex tools and the cost of specialists are barriers that InsightFlow eliminates, making data intelligence accessible to everyone.",
+
+  "solution_title": "AI-Assisted Data Analysis, hassle-free.",
+  "solution_description": "Our visual and AI-guided interface accompanies you every step, from upload to dashboard. You don't need to be a data scientist or know how to code.",
+
+  "agent_title": "Meet the Data Avengers!",
+  "agent_subtitle": "The team of AI superheroes is ready to turn your data into knowledge with their unique powers.",
+
+  "cta_title": "Ready to Transform Your Data?",
+  "cta_description": "Join thousands of companies that have already discovered the power of smart insights.",
+  "cta_freeTrial": "Free Trial",
+  "cta_viewPlans": "View Plans",
+
+  "plans_title": "Plans",
+  "plans_description": "Choose the ideal plan for you.",
+  "plans_free_name": "Free",
+  "plans_free_description": "Basic access to start exploring the platform.",
+  "plans_free_price": "€0",
+  "plans_free_feature_1": "No AI agents",
+  "plans_free_feature_2": "1 analysis per month",
+  "plans_free_feature_3": "Only with linear models",
+  "plans_free_feature_4": "Manual reports and sharing",
+  "plans_free_button": "Start for Free",
+  "plans_premium_name": "Premium",
+  "plans_premium_description": "Advanced features for professionals and small businesses.",
+  "plans_premium_price": "€49/month",
+  "plans_premium_feature_1": "Ingestion and Quality Agent",
+  "plans_premium_feature_2": "Unlimited analyses",
+  "plans_premium_feature_3": "Full dynamic forecasting",
+  "plans_premium_feature_4": "Full reports and sharing",
+  "plans_premium_button": "Get Premium",
+  "plans_premium_payment_alert": "Payment feature under development!",
+  "plans_diamond_name": "Diamond",
+  "plans_diamond_description": "Full access to the complete agent team for large companies.",
+  "plans_diamond_price": "€199/month",
+  "plans_diamond_feature_1": "Complete agent team",
+  "plans_diamond_feature_2": "Unlimited analyses",
+  "plans_diamond_feature_3": "Full dynamic forecasting",
+  "plans_diamond_feature_4": "Full reports and sharing",
+  "plans_diamond_button": "Get Diamond",
+  "plans_diamond_payment_alert": "Payment feature under development!",
+
+  "about_title": "Our Mission: Democratize Data Analysis.",
+  "about_subtitle": "Our mission is to democratize data analysis",
+  "about_description": "At InsightFlow, our vision is to turn the information age into an era of smart, actionable decisions. The platform was created to break the cycle of forgotten data in SMEs, offering a powerful and accessible tool for everyone, regardless of their experience level.",
+  "about_team_title": "The Team",
+  "about_team_description": "We are passionate about data, innovation, and helping companies grow through intelligent insights.",
+  "about_pillars_title": "Our Pillars",
+  "about_pillar_transparency_title": "Transparency:",
+  "about_pillar_transparency_desc": "Every action and analysis result is recorded and can be reviewed, ensuring total trust in the generated insights.",
+  "about_pillar_assistance_title": "Smart Assistance:",
+  "about_pillar_assistance_desc": "Our AI suggests the best analytical paths, but the final control always remains in your hands.",
+  "about_pillar_flexibility_title": "Flexibility:",
+  "about_pillar_flexibility_desc": "Allows you to customize the analytical journey according to your specific needs.",
+  "about_pillar_reproducibility_title": "Reproducibility:",
+  "about_pillar_reproducibility_desc": "Analyses can be easily repeated and results exported for reports and presentations.",
+  "about_technology": "Our technology is based on a modular analytical pipeline that intuitively guides the user from data ingestion to result interpretation. We believe that access to data science should not be a privilege, but a tool for the growth of any business."
 }

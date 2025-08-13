@@ -16,10 +16,7 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-teal-400 mb-4">
               InsightFlow
             </h3>
-            <p className="text-sm">
-              Democratizamos a análise de dados com o poder da IA, tornando os
-              insights acessíveis a todas as empresas.
-            </p>
+            <p className="text-sm">{t("footer_description")}</p>
           </div>
 
           {/* Quick Links */}
@@ -66,7 +63,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
-                  Termos de Serviço
+                  {t("footer_terms_and_services")}
                 </Link>
               </li>
               <li>
@@ -74,7 +71,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
-                  Política de Privacidade
+                  {t("footer_privacy_policy")}
                 </Link>
               </li>
               <li>

@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/Auth/useAuth/useAuth";
 import type { User } from "@/types";
 import { useTranslations, useLocale } from "@/lib/i18n";
 import Links from "./Links";
+import LangSwitcher from "./LangSwitcher"; // Importa o novo componente
 
 interface NavbarProps {
   user?: User | null;
@@ -123,28 +124,9 @@ export default function Navbar({ user, onLogout }: NavbarProps) {
               </li>
             )}
 
-            {/* Botões de idioma ainda usam router.push */}
+            {/* Substitui os botões de idioma pelo componente LangSwitcher */}
             <li className="nav-item ms-3">
-              <div className="btn-group">
-                <button
-                  className={`btn btn-sm ${
-                    locale === "pt" ? "btn-teal" : "btn-outline-secondary"
-                  }`}
-                  onClick={() => router.push("/pt")}
-                  type="button"
-                >
-                  PT
-                </button>
-                <button
-                  className={`btn btn-sm ${
-                    locale === "en" ? "btn-teal" : "btn-outline-secondary"
-                  }`}
-                  onClick={() => router.push("/en")}
-                  type="button"
-                >
-                  EN
-                </button>
-              </div>
+              <LangSwitcher />
             </li>
           </ul>
         </div>

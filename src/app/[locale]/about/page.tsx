@@ -3,9 +3,11 @@
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 import { useAuth } from "@/hooks/Auth/useAuth/useAuth";
+import { useTranslations } from "@/lib/i18n"; // 1. Importa o hook de tradução
 
 export default function AboutUs() {
   const { user } = useAuth();
+  const t = useTranslations(); // 2. Usa o hook
 
   return (
     <>
@@ -15,59 +17,43 @@ export default function AboutUs() {
         <section className="container mx-auto p-8 max-w-6xl">
           <div className="bg-gray-950 p-8 rounded-lg shadow-xl">
             <h1 className="text-4xl font-bold text-teal-400 mb-6">
-              A Nossa Missão: Democratizar a Análise de Dados.
+              {t("about_title")}
             </h1>
             <div className="space-y-6 text-lg text-gray-300">
-              <p>
-                Na InsightFlow, a nossa visão é transformar a era da informação
-                numa era de decisões inteligentes e acionáveis. A plataforma foi
-                criada para quebrar o ciclo de dados esquecidos nas PMEs,
-                oferecendo uma ferramenta poderosa e acessível para todos,
-                independentemente do seu nível de experiência.
-              </p>
+              <p>{t("about_description")}</p>
 
               <h2 className="text-2xl font-bold text-white mt-8 mb-4">
-                Os Nossos Pilares
+                {t("about_pillars_title")}
               </h2>
 
               <ul className="list-disc list-inside space-y-2">
                 <li>
                   <span className="font-semibold text-teal-400">
-                    Transparência:
+                    {t("about_pillar_transparency_title")}
                   </span>{" "}
-                  Cada ação e resultado da análise é registado e pode ser
-                  revisto, garantindo total confiança nos insights gerados.
+                  {t("about_pillar_transparency_desc")}
                 </li>
                 <li>
                   <span className="font-semibold text-teal-400">
-                    Assistência Inteligente:
+                    {t("about_pillar_assistance_title")}
                   </span>{" "}
-                  A nossa IA sugere os melhores caminhos analíticos, mas o
-                  controlo final permanece sempre nas suas mãos.
+                  {t("about_pillar_assistance_desc")}
                 </li>
                 <li>
                   <span className="font-semibold text-teal-400">
-                    Flexibilidade:
+                    {t("about_pillar_flexibility_title")}
                   </span>{" "}
-                  Permite-lhe personalizar o percurso analítico de acordo com as
-                  suas necessidades específicas.
+                  {t("about_pillar_flexibility_desc")}
                 </li>
                 <li>
                   <span className="font-semibold text-teal-400">
-                    Reprodutibilidade:
+                    {t("about_pillar_reproducibility_title")}
                   </span>{" "}
-                  As análises podem ser facilmente repetidas e os resultados
-                  exportados para relatórios e apresentações.
+                  {t("about_pillar_reproducibility_desc")}
                 </li>
               </ul>
 
-              <p className="mt-6">
-                A nossa tecnologia baseia-se num pipeline analítico modular que
-                guia o utilizador de forma intuitiva, desde a ingestão de dados
-                até à interpretação dos resultados. Acreditamos que o acesso à
-                ciência de dados não deve ser um privilégio, mas sim uma
-                ferramenta para o crescimento de qualquer negócio.
-              </p>
+              <p className="mt-6">{t("about_technology")}</p>
             </div>
           </div>
         </section>

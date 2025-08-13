@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import AuthProvider from "@/components/providers/AuthProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     "insights",
   ],
   authors: [{ name: "InsightFlow Team" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

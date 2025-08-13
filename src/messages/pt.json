@@ -6,26 +6,32 @@
     "cta": "Começar Agora",
     "freeTrial": "Teste Grátis"
   },
-  "features": {
-    "title": "Funcionalidades Principais",
-    "subtitle": "Tudo o que precisa para análise de dados profissional",
-    "ai": {
-      "title": "IA Avançada",
-      "description": "Algoritmos de machine learning para análise preditiva e insights automatizados."
-    },
-    "dashboard": {
-      "title": "Dashboard Intuitivo",
-      "description": "Interface limpa e fácil de usar para visualizar todos os seus dados."
-    },
-    "realtime": {
-      "title": "Tempo Real",
-      "description": "Atualizações instantâneas e monitorização em tempo real dos seus dados."
-    },
-    "security": {
-      "title": "Segurança Avançada",
-      "description": "Proteção de dados de nível empresarial com encriptação ponta a ponta."
-    }
+
+  "features_title": "Funcionalidades Principais",
+  "features_subtitle": "Tudo o que precisa para análise de dados profissional",
+
+  "features_ai_title": "IA Avançada",
+  "features_ai_description": "Algoritmos de machine learning para análise preditiva e insights automatizados.",
+
+  "features_simple_title": "Simples e Intuitivo",
+  "features_simple_description": "Interface de arrastar e soltar para criar dashboards personalizados em minutos.",
+
+  "features_realtime_title": "Atualizações em Tempo Real",
+  "features_realtime_description": "Monitorização em tempo real para que nunca perca uma atualização importante.",
+
+  "dashboard": {
+    "title": "Dashboard Intuitivo",
+    "description": "Interface limpa e fácil de usar para visualizar todos os seus dados."
   },
+  "realtime": {
+    "title": "Tempo Real",
+    "description": "Atualizações instantâneas e monitorização em tempo real dos seus dados."
+  },
+  "security": {
+    "title": "Segurança Avançada",
+    "description": "Proteção de dados de nível empresarial com encriptação ponta a ponta."
+  },
+
   "stats": {
     "users": "Utilizadores Ativos",
     "analyses": "Análises Realizadas",
@@ -46,10 +52,71 @@
     "dashboard": "Dashboard",
     "logout": "Sair"
   },
-  "Footer": {
-    "company": "Empresa",
-    "links": "Links Úteis",
-    "contact": "Contacto",
-    "rights": "Todos os direitos reservados"
-  }
+
+  "Footer_company": "Empresa",
+  "Footer_links": "Links Úteis",
+  "Footer_contact": "Contacto",
+  "Footer_rights": "Todos os direitos reservados",
+  "footer_terms_and_services": "Termos de Serviço",
+  "footer_privacy_policy": "Política de Privacidade",
+  "footer_description": "Democratizamos a análise de dados com o poder da IA, tornando os insights acessíveis a todas as empresas.",
+
+  "whyPlatform_title": "Os seus dados são a sua maior vantagem competitiva.",
+  "whyPlatform_description": "Mais de 80% das PMEs têm dados valiosos que não utilizam. Ferramentas complexas e o custo de especialistas são barreiras que a InsightFlow elimina, tornando a inteligência de dados acessível a todos.",
+
+  "solution_title": "Análise de Dados Assistida por IA, sem complicação.",
+  "solution_description": "A nossa interface visual e guiada por IA acompanha-o em cada passo, do upload ao dashboard. Não precisa de ser um cientista de dados ou de saber programar.",
+
+  "agent_title": "Conheça os Vingadores de Dados!",
+  "agent_subtitle": "A equipa de super-heróis de IA está pronta para transformar os seus dados em conhecimento com os seus poderes únicos.",
+
+  "cta_title": "Pronto para Transformar os Seus Dados?",
+  "cta_description": "Junte-se a milhares de empresas que já descobriram o poder dos insights inteligentes.",
+  "cta_freeTrial": "Teste Grátis",
+  "cta_viewPlans": "Ver Planos",
+
+  "plans_title": "Planos",
+  "plans_description": "Escolha o plano ideal para você.",
+  "plans_free_name": "Grátis",
+  "plans_free_description": "Acesso básico para começar a explorar a plataforma.",
+  "plans_free_price": "€0",
+  "plans_free_feature_1": "Sem agentes de IA",
+  "plans_free_feature_2": "1 análise por mês",
+  "plans_free_feature_3": "Apenas com modelos lineares",
+  "plans_free_feature_4": "Relatórios e partilha manual",
+  "plans_free_button": "Começar Gratuitamente",
+  "plans_premium_name": "Premium",
+  "plans_premium_description": "Funcionalidades avançadas para profissionais e pequenas empresas.",
+  "plans_premium_price": "€49/mês",
+  "plans_premium_feature_1": "Agente de Ingestão e Qualidade",
+  "plans_premium_feature_2": "Análises ilimitadas",
+  "plans_premium_feature_3": "Previsão dinâmica completa",
+  "plans_premium_feature_4": "Relatórios e partilha completa",
+  "plans_premium_button": "Adquirir Premium",
+  "plans_premium_payment_alert": "Funcionalidade de pagamento em desenvolvimento!",
+  "plans_diamond_name": "Diamond",
+  "plans_diamond_description": "Acesso total à equipa completa de agentes para grandes empresas.",
+  "plans_diamond_price": "€199/mês",
+  "plans_diamond_feature_1": "Equipa completa de agentes",
+  "plans_diamond_feature_2": "Análises ilimitadas",
+  "plans_diamond_feature_3": "Previsão dinâmica completa",
+  "plans_diamond_feature_4": "Relatórios e partilha completa",
+  "plans_diamond_button": "Adquirir Diamond",
+  "plans_diamond_payment_alert": "Funcionalidade de pagamento em desenvolvimento!",
+
+  "about_title": "A Nossa Missão: Democratizar a Análise de Dados.",
+  "about_subtitle": "A nossa missão é democratizar a análise de dados",
+  "about_description": "Na InsightFlow, a nossa visão é transformar a era da informação numa era de decisões inteligentes e acionáveis. A plataforma foi criada para quebrar o ciclo de dados esquecidos nas PMEs, oferecendo uma ferramenta poderosa e acessível para todos, independentemente do seu nível de experiência.",
+  "about_team_title": "A Equipa",
+  "about_team_description": "Somos apaixonados por dados, inovação e por ajudar empresas a crescerem através de insights inteligentes.",
+  "about_pillars_title": "Os Nossos Pilares",
+  "about_pillar_transparency_title": "Transparência:",
+  "about_pillar_transparency_desc": "Cada ação e resultado da análise é registado e pode ser revisto, garantindo total confiança nos insights gerados.",
+  "about_pillar_assistance_title": "Assistência Inteligente:",
+  "about_pillar_assistance_desc": "A nossa IA sugere os melhores caminhos analíticos, mas o controlo final permanece sempre nas suas mãos.",
+  "about_pillar_flexibility_title": "Flexibilidade:",
+  "about_pillar_flexibility_desc": "Permite-lhe personalizar o percurso analítico de acordo com as suas necessidades específicas.",
+  "about_pillar_reproducibility_title": "Reprodutibilidade:",
+  "about_pillar_reproducibility_desc": "As análises podem ser facilmente repetidas e os resultados exportados para relatórios e apresentações.",
+  "about_technology": "A nossa tecnologia baseia-se num pipeline analítico modular que guia o utilizador de forma intuitiva, desde a ingestão de dados até à interpretação dos resultados. Acreditamos que o acesso à ciência de dados não deve ser um privilégio, mas sim uma ferramenta para o crescimento de qualquer empresa."
 }
